@@ -1,0 +1,53 @@
+﻿<windows:PrismApplication x:Class="Bandit.App"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:local="using:Bandit"
+                          xmlns:windows="using:Prism.Windows"
+                          RequestedTheme="Light">
+
+    <windows:PrismApplication.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <SolidColorBrush x:Key="BanditBlack"
+                                     Color="#292C37" />
+                    <SolidColorBrush x:Key="BanditGray"
+                                     Color="#686466" />
+                    <SolidColorBrush x:Key="BanditSlate"
+                                     Color="#839CB5" />
+                    <SolidColorBrush x:Key="BanditBlue"
+                                     Color="#96D7EB" />
+                    <SolidColorBrush x:Key="BanditPink"
+                                     Color="#F2E4F9" />
+                    <SolidColorBrush x:Key="BanditWhite"
+                                     Color="#EFEFEE" />
+                    <SolidColorBrush x:Key="BanditRed"
+                                     Color="#B11623" />
+                </ResourceDictionary>
+
+                <ResourceDictionary>
+                    <Style x:Key="ThemedAppBarIconStyle"
+                           TargetType="AppBarButton">
+                        <Setter Property="Background"
+                                Value="{StaticResource BanditBlue}" />
+                        <Setter Property="Foreground"
+                                Value="{StaticResource BanditWhite}" />
+                    </Style>
+
+                    <Style x:Key="ThemedPageStyle"
+                           TargetType="Page">
+                        <Setter Property="Background"
+                                Value="{StaticResource BanditGray}" />
+                    </Style>
+
+                    <Style x:Key="ThemedAvailableBandsBackgroundGridStyle"
+                           TargetType="Grid">
+                        <Setter Property="Background"
+                                Value="{StaticResource BanditBlue}" />
+                    </Style>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </windows:PrismApplication.Resources>
+
+</windows:PrismApplication>

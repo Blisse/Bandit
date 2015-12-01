@@ -1,0 +1,28 @@
+﻿<local:NavigationAwarePage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:local="using:Bandit.Views"
+                           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                           xmlns:prism="using:Prism.Windows.Mvvm"
+                           xmlns:designViewModels="using:Bandit.DesignViewModels"
+                           x:Class="Bandit.Views.MainPage"
+                           prism:ViewModelLocator.AutoWireViewModel="True"
+                           d:DataContext="{d:DesignInstance designViewModels:MainPageDesignViewModel}"
+                           mc:Ignorable="d"
+                           Style="{StaticResource ThemedPageStyle}">
+
+    <Grid>
+        <Hub>
+            <HubSection Header="Bands">
+                <DataTemplate>
+                    <local:BandsManagerView />
+                </DataTemplate>
+            </HubSection>
+            <HubSection Header="Tiles">
+                <DataTemplate>
+                    <local:TilesManagerView />
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+    </Grid>
+</local:NavigationAwarePage>
